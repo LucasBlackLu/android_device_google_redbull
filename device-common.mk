@@ -467,6 +467,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libc2dcolorconvert
 
+# Google Assistant
+PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
