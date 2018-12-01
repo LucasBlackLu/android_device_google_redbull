@@ -747,6 +747,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.hardware.device_unique_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.device_unique_attestation.xml
 
+# RCS
+PRODUCT_PACKAGES += \
+    PresencePolling \
+    RcsService
+
 # Enable modem logging
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.radio.log_loc="/data/vendor/modem_dump" \
