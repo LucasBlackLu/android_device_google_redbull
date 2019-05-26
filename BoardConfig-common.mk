@@ -17,6 +17,8 @@
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 TARGET_BOARD_PLATFORM := lito
 USES_DEVICE_GOOGLE_REDBULL := true
 
@@ -53,6 +55,12 @@ KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/google/redbull/modules.loa
 KERNEL_MODULES_LOAD := $(foreach m,$(KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(filter-out $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(filter $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
+
+# Partitions
+AB_OTA_PARTITIONS += \
+    vendor
+
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
