@@ -17,6 +17,9 @@
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 TARGET_BOARD_PLATFORM := lito
 USES_DEVICE_GOOGLE_REDBULL := true
 
@@ -123,6 +126,12 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_pixel \
     libfstab
+
+# Partitions
+AB_OTA_PARTITIONS += \
+    vendor
+
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
