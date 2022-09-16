@@ -760,6 +760,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.hardware.device_unique_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.device_unique_attestation.xml
 
+# Needed for camera
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
