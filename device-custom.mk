@@ -12,6 +12,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display \
     vendor/qcom/opensource/display
 
+# Adaptive charging
+PRODUCT_COPY_FILES += \
+    device/google/redbull/conf/adaptivecharging.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/adaptivecharging.xml
+
 # AiAi Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/allowlist_com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.google.android.as.xml
