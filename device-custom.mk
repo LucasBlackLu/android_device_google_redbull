@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 endif
 
+# Remove few packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
