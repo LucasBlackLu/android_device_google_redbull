@@ -763,6 +763,10 @@ PRODUCT_COPY_FILES += \
 # Needed for camera
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
