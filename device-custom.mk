@@ -28,6 +28,11 @@ PRODUCT_COPY_FILES += \
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Parts
 PRODUCT_PACKAGES += \
     GoogleParts
