@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Remove few packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Build necessary packages for system_ext
 
 # Display
