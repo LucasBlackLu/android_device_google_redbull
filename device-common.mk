@@ -155,6 +155,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Needed for camera
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
+# Remove few packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # A/B support
 PRODUCT_PACKAGES += \
     otapreopt_script \
