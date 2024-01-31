@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
 # Needed for camera
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Remove few packages
 PRODUCT_PACKAGES += \
     RemovePackages
