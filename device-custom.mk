@@ -32,6 +32,8 @@ PRODUCT_COPY_FILES += \
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+# Use mini gapps
+TARGET_USES_MINI_GAPPS := true
 
 # Now Playing
 PRODUCT_PACKAGES += \
